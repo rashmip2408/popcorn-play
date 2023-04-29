@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F6FFDE;
+}
+
+header {
+    display: flex;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    align-self: center;
+    margin-left: 35rem;
+    color: #4d6244;
+}
+
+.search {
+    margin: 3rem;
+    margin-left: 18rem;
+    background-color: transparent;
+    border: 2px solid #566355;
+    border-radius: 50px;
+    color: #617A55;
+    padding: 3px;
+}
+
+.search::placeholder {
+    color: #617A55;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    background-color: #C9DBB2;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px #AAC8A7;
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    justify-content: center;
+    align-content: center;
+    width: 265px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #2e342e;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1 rem 1 rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.movie-info span {
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25 rem 0.8rem;
+}
+
+.movie-info span.green {
+    color: #2d362c;
+
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: rgb(235, 224, 103);
+}
+
+.overview {
+    background-color: #F6FFDE;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translate(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #798f76;
+}
+
+@media only screen and (max-width: 992px) {
+    h1 {
+        margin-left: 10%;
+    }
+
+    .search {
+        margin-left: 5%;
+    }
+
+    .movie {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        margin-left: 5%;
+    }
+
+    .search {
+        margin-left: 2%;
+        width: 70%;
+    }
+
+    .movie {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .search {
+        width: 79%;
+    }
+
+    .movie {
+        width: 90%;
+    }
+}
